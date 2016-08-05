@@ -22,6 +22,7 @@ public:
 private:
 
    void renderGeometry();
+
    void renderFrameBuffer();
 
    Program * texProg;

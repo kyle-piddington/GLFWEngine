@@ -19,5 +19,6 @@
 #include "InstancingScene.h"
 #include "AnimScene.h"
 #include "MotionBlurScene.h"
+#include "GodRayScene.h"
 
 #endif

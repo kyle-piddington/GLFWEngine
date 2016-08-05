@@ -65,7 +65,7 @@ add_executable(GraphicsEngine ${PROJECT_SOURCE_DIR}/src/main.cpp)
 
 target_link_libraries(GraphicsEngine GraphicsEngine_lib ${EXTRA_LIBS})
 if (APPLE)
-    target_link_libraries(GraphicsEngine "-framework OpenGL -framework CoreFoundation -framework CoreServices")
+    target_link_libraries(GraphicsEngine "-framework OpenGL -framework CoreFoundation -framework CoreServices -framework Cocoa  -framework IOKit -framework CoreVideo")
 endif()
 
 

@@ -19,7 +19,7 @@ void TabletopCamera::update(const Context * ctx)
    {
       if(Keyboard::isKeyDown(GLFW_KEY_LEFT_SHIFT))
       {
-         radius += (Mouse::getLastY() - Mouse::getY())/(float)(ctx->getWindowHeight())/2.0 * Cam_Zoom_Speed;
+         radius += 5*(Mouse::getLastY() - Mouse::getY())/(float)(ctx->getWindowHeight())/2.0 * Cam_Zoom_Speed;
       }
 
       else

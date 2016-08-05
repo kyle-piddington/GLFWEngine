@@ -53,9 +53,10 @@ FramebufferConfiguration FramebufferConfiguration::DefaultFramebuffer(int w, int
    FramebufferConfiguration config(w,h);
    RenderbufferAttachment attachment(GL_DEPTH24_STENCIL8, GL_DEPTH_STENCIL_ATTACHMENT);
    config.addRenderbuffer(attachment);
-   TextureAttachment tbuffer(
-      TextureConfig("color", GL_RGB, GL_RGB, GL_UNSIGNED_BYTE)
-      ,GL_COLOR_ATTACHMENT0);
+   TextureConfig tCfg("color", GL_RGB, GL_RGB, GL_UNSIGNED_BYTE);
+   tCfg.setWrapMode(GL_CLAMP_TO_BORDER);
+   TextureAttachment tbuffer(tCfg,GL_COLOR_ATTACHMENT0);
+
    config.addTexturebuffer(tbuffer);
    return config;
 }

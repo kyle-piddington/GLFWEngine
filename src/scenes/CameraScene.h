@@ -5,13 +5,14 @@
 #include "Keyboard.h"
 #include "Mouse.h"
 #include "TabletopCamera.h"
+#include "FirstPersonCamera.h"
 class CameraScene:public EmptyScene
 {
 public:
    CameraScene(Context * ctx);
    virtual ~CameraScene();
    virtual void update();
-   TabletopCamera camera;
+   FirstPersonCamera camera;
    float Cam_Speed = 1.0/10.0;
    float Cam_Rot_Speed = M_PI;
 

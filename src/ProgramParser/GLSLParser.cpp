@@ -116,6 +116,17 @@ void GLSLParser::UniformObject::bind(const glm::vec3 & v) const
       glUniform3fv(id,1,glm::value_ptr(v));
    }
 }
+void GLSLParser::UniformObject::bind(const glm::vec4 & v) const
+{
+   if(type != GLSLvector4)
+   {
+      throwTypeError("vector4");
+   }
+   if(id > -1)
+   {
+      glUniform4fv(id,1,glm::value_ptr(v));
+   }
+}
 void GLSLParser::UniformObject::bind(const glm::mat2 & m) const
 {
    if(type != GLSLmat3)
